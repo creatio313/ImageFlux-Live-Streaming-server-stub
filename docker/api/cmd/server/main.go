@@ -251,14 +251,11 @@ HLSライブ配信視聴向けの要求内容をログ出力する。
 */
 func logHLSRequest(r *http.Request) {
 	log.Printf(
-		"HLSライブ配信視聴リクエスト受信：method=%s path=%s rawQuery=%q kid=%q remoteAddr=%s origin=%q userAgent=%q",
+		"HLSリクエスト: method=%s path=%s query=%s headers=%v",
 		r.Method,
 		r.URL.Path,
 		r.URL.RawQuery,
-		r.URL.Query().Get("kid"),
-		r.RemoteAddr,
-		r.Header.Get("Origin"),
-		r.UserAgent(),
+		r.Header,
 	)
 }
 
