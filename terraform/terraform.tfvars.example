@@ -1,0 +1,7 @@
+access_token                   = "さくらのクラウドのアクセストークン"
+access_token_secret            = "さくらのクラウドのアクセストークンシークレット"
+imageflux_access_token         = "ImageFluxのAPIトークン"
+container_registry_image       = "コンテナレジストリのイメージ"
+container_registry_password_wo = "コンテナレジストリユーザのパスワード"
+container_registry_server      = "コンテナレジストリのホスト名"
+container_registry_username    = "コンテナレジストリユーザのユーザ名"

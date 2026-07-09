@@ -1,0 +1,15 @@
+# server
+docker/*.exe
+
+# Terraform variables and secrets
+terraform/*.tfvars
+terraform/*.tfvars.json
+!terraform/*.tfvars.example
+
+# Terraform state files
+terraform/terraform.tfstate
+terraform/terraform.tfstate.*
+terraform/.terraform.tfstate.lock.info
+
+# Terraform directory
+terraform/.terraform/
