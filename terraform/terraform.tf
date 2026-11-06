@@ -2,7 +2,7 @@ terraform {
   required_providers {
     sakura = {
       source  = "sacloud/sakura"
-      version = "3.12.5"
+      version = "3.14.4"
     }
   }
 }

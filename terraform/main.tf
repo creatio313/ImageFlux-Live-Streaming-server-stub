@@ -2,7 +2,7 @@ resource "sakura_apprun_shared" "imageflux_live_streaming_stub" {
   name = "ImageFlux Live StreamingのWebhook/APIスタブ"
 
   max_scale       = 3
-  min_scale       = 0
+  min_scale       = 1
   port            = 8080
   timeout_seconds = 60
 
@@ -19,9 +19,10 @@ resource "sakura_apprun_shared" "imageflux_live_streaming_stub" {
         username            = var.container_registry_username
       }
     }
-    env = [{
-      key   = "IMAGEFLUX_ACCESS_TOKEN"
-      value = var.imageflux_access_token
+    secret = [{
+      key      = "IMAGEFLUX_ACCESS_TOKEN"
+      value_wo = var.imageflux_access_token
+      value_wo_version = 1
     }]
     probe = {
       http_get = {
